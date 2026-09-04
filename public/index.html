@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tem Kubico</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app">
+        <header class="app__header">
+            <div class="logo">Mark<span>Suit</span></div>
+            <p class="subtitle">Encontre a casa certa — rápido e fácil</p>
+        </header>
+
+        <main class="card">
+            <label class="field">
+                <span class="field__label">Província</span>
+                <div class="field__row">
+                    <input id="provincia" type="text" placeholder="Ex: Maputo">
+                </div>
+            </label>
+
+            <label class="field">
+                <span class="field__label">Preço máximo</span>
+                <div class="field__row">
+                    <input id="preco" type="number" placeholder="MT 100000">
+                </div>
+            </label>
+
+            <button class="btn btn--primary" onclick="procurar()">Procurar casas</button>
+
+            <div id="resultado" class="resultado" aria-live="polite"></div>
+        </main>
+
+        <footer class="app__footer">
+            <small>Touch-friendly · Mobile first</small>
+        </footer>
+    </div>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

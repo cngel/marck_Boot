@@ -1,0 +1,13 @@
+# Docker files
+.docker/
+docker-compose.override.yml
+
+# Node modules
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# OS files
+.DS_Store
+Thumbs.db
+.env.local
