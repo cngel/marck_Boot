@@ -103,23 +103,27 @@ button,input{font:inherit}
 .employee-form label{display:grid;gap:6px;color:var(--tg-muted);font-size:0.78rem}
 .employee-form input{
   width:100%;
+  max-width:100%;
   background:#fff;
   border:1px solid var(--tg-border);
   border-radius:12px;
-  padding:12px 14px;
-  font-size:0.95rem;
+  padding:11px 12px;
+  font-size:0.92rem;
   color:var(--tg-text);
 }
 
 .btn{
-  width:100%;
+  width:calc(100% - 12px);
+  max-width:220px;
+  display:block;
+  margin:4px auto 0;
   border:none;
   border-radius:12px;
   background:linear-gradient(180deg, var(--tg-primary) 0%, var(--tg-primary-dark) 100%);
   color:#fff;
   font-weight:700;
-  padding:12px 14px;
-  min-height:46px;
+  padding:11px 14px;
+  min-height:44px;
   cursor:pointer;
   box-shadow:0 6px 18px rgba(46,166,255,0.28);
 }
@@ -163,5 +167,6 @@ button,input{font:inherit}
   .summary{grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px}
   .content-grid{grid-template-columns:1.05fr 1.4fr}
   .panel-header{flex-direction:row;align-items:center}
+  .btn{max-width:220px}
 }
 
