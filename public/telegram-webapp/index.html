@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MarkSuite — Funcionários</title>
+  <link rel="stylesheet" href="/telegram-webapp/style.css">
+</head>
+<body>
+  <div id="app" class="layout">
+    <aside class="sidebar">
+      <div class="brand">MarkSuite</div>
+      <nav class="nav">
+        <a class="active" href="#dashboard">Dashboard</a>
+        <a href="#funcionarios">Funcionários</a>
+        <a href="#vendas">Vendas</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h1>Funcionários e Vendas</h1>
+          <p class="subtitle">Resumo geral do time e do desempenho comercial</p>
+        </div>
+      </header>
+
+      <section class="summary" id="dashboard">
+        <div class="metric">
+          <div class="metric-label">Funcionários</div>
+          <div class="metric-value" id="metric-employees">--</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Vendas</div>
+          <div class="metric-value" id="metric-sales">--</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Faturado</div>
+          <div class="metric-value" id="metric-revenue">--</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Meta</div>
+          <div class="metric-value" id="metric-goal">--</div>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <div class="panel panel-form" id="funcionarios">
+          <div class="panel-header">
+            <h2>Novo Funcionário</h2>
+          </div>
+
+          <form id="employeeForm" class="employee-form">
+            <label>
+              <span>Nome</span>
+              <input type="text" id="employeeName" name="name" placeholder="Ex: Ana Silva" required>
+            </label>
+
+            <label>
+              <span>Cargo</span>
+              <input type="text" id="employeeRole" name="role" placeholder="Ex: Vendedor" required>
+            </label>
+
+            <label>
+              <span>Setor</span>
+              <input type="text" id="employeeDepartment" name="department" placeholder="Ex: Vendas" required>
+            </label>
+
+            <label>
+              <span>WhatsApp</span>
+              <input type="tel" id="employeePhone" name="phone" placeholder="Ex: +244 923 000 000" required>
+            </label>
+
+            <label>
+              <span>Salário</span>
+              <input type="number" id="employeeSalary" name="salary" placeholder="Ex: 85000" min="0" required>
+            </label>
+
+            <button type="submit" class="btn">Cadastrar funcionário</button>
+          </form>
+        </div>
+
+        <div class="panel panel-list">
+          <div class="panel-header">
+            <h2>Funcionários cadastrados</h2>
+            <input id="employeeSearch" placeholder="Pesquisar funcionário..." />
+          </div>
+
+          <div class="table-wrap">
+            <table class="data-table" id="employeesTable">
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Cargo</th>
+                  <th>Setor</th>
+                  <th>WhatsApp</th>
+                  <th>Salário</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel sales-panel" id="vendas">
+        <div class="panel-header">
+          <h2>Vendas</h2>
+        </div>
+
+        <div class="table-wrap">
+          <table class="data-table" id="salesTable">
+            <thead>
+              <tr>
+                <th>Cliente</th>
+                <th>Produto</th>
+                <th>Funcionario</th>
+                <th>Valor</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/telegram-webapp/app.js"></script>
+</body>
+</html>
